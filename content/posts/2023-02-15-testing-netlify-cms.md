@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Testing netlify CMS
+title: 안녕하세요!
 date: 2023-02-15T06:07:23.079Z
 ---
-T﻿his is a test from a CMS based posting!
+우.안되.알 아직도 하하하하 ...안써보ㅕ.한글이 .
