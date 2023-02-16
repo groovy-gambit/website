@@ -12,6 +12,13 @@
         {{ .Title }}
       </h1>
       <div class="meta">
+        {{- range .Params.authors }}
+          <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">
+              {{ . }}
+            </span>
+          </span>
+        {{ end }}
         {{ if (or (isset .Site "author") (isset .Site "title"))}}
         <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">
