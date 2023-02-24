@@ -74,12 +74,16 @@
                 class: "imgur-embed-pub",
                 "data-id": `a/${src}`,
               },
-              []
+              [
+                h("a", {
+                  href: `//imgur.com/a/${src}`,
+                }),
+              ]
             ),
             h(
               "script",
               {
-                async: null,
+                async: true,
                 src: "//s.imgur.com/min/embed.js",
                 charset: "utf-8",
               },
