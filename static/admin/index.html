@@ -32,9 +32,16 @@
         },
         control: ({ src, onChange }) => {
           return h(
-            "div",
+            "span",
             { style: { display: "flex", flexDirection: "column" } },
             [
+              h("input", {
+                key: "control-input",
+                value: src,
+                onChange: (event) => {
+                  onChange({ src: event.target.value });
+                },
+              }),
               h(
                 "blockquote",
                 {
@@ -57,13 +64,6 @@
         },
         preview: ({ src }) => {
           return h("span", {}, [
-            h("input", {
-              key: "control-input",
-              value: src,
-              onChange: (event) => {
-                onChange({ src: event.target.value });
-              },
-            }),
             h(
               "blockquote",
               {
