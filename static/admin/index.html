@@ -33,7 +33,7 @@
         control: ({ src, onChange }) => {
           return h(
             "span",
-            { style: { display: "flex", flexDirection: "column" } },
+            {},
             [
               h("input", {
                 key: "control-input",
@@ -41,28 +41,7 @@
                 onChange: (event) => {
                   onChange({ src: event.target.value });
                 },
-              }),
-              h(
-                "blockquote",
-                {
-                  class: "imgur-embed-pub",
-                  "data-id": `a/${src}`,
-                },
-                [
-                  h("a", {
-                    href: `//imgur.com/a/${src}`,
-                  }),
-                ]
-              ),
-              h(
-                "script",
-                {
-                  async: true,
-                  src: "//s.imgur.com/min/embed.js",
-                  charset: "utf-8",
-                },
-                ""
-              ),
+              })
             ]
           );
         },
