@@ -31,28 +31,32 @@
           return [src];
         },
         control: ({ src, onChange }) => {
-          return h("span", {}, [
-            h(
-              "blockquote",
-              {
-                class: "imgur-embed-pub",
-                "data-id": `a/${src}`,
-              },
-              []
-            ),
-            h(
-              "script",
-              {
-                async: null,
-                src: "//s.imgur.com/min/embed.js",
-                charset: "utf-8",
-              },
-              ""
-            ),
-          ]);
+          return h(
+            "div",
+            { style: { display: "flex", flexDirection: "column" } },
+            [
+              h(
+                "blockquote",
+                {
+                  class: "imgur-embed-pub",
+                  "data-id": `a/${src}`,
+                },
+                []
+              ),
+              h(
+                "script",
+                {
+                  async: null,
+                  src: "//s.imgur.com/min/embed.js",
+                  charset: "utf-8",
+                },
+                ""
+              ),
+            ]
+          );
         },
         preview: ({ src }) => {
-          return h("div", { style: "display: flex; flex-direction: column;" }, [
+          return h("span", {}, [
             h("input", {
               key: "control-input",
               value: src,
