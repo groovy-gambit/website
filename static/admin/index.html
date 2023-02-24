@@ -48,7 +48,11 @@
                   class: "imgur-embed-pub",
                   "data-id": `a/${src}`,
                 },
-                []
+                [
+                  h("a", {
+                    href: `//imgur.com/a/${src}`,
+                  }),
+                ]
               ),
               h(
                 "script",
