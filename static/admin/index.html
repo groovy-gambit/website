@@ -15,6 +15,72 @@
     <script>
       window.CMS.init();
 
+      CMS.registerShortcode("imgur", {
+        label: "Imgur",
+        openTag: "[",
+        closeTag: "]",
+        separator: "|",
+        toProps: (args) => {
+          if (args.length > 0) {
+            return { src: args[0] };
+          }
+
+          return { src: "" };
+        },
+        toArgs: ({ src }) => {
+          return [src];
+        },
+        control: ({ src, onChange }) => {
+          return h("span", {}, [
+            h(
+              "blockquote",
+              {
+                class: "imgur-embed-pub",
+                "data-id": `a/${src}`,
+              },
+              []
+            ),
+            h(
+              "script",
+              {
+                async: null,
+                src: "//s.imgur.com/min/embed.js",
+                charset: "utf-8",
+              },
+              ""
+            ),
+          ]);
+        },
+        preview: ({ src }) => {
+          return h("div", { style: "display: flex; flex-direction: column;" }, [
+            h("input", {
+              key: "control-input",
+              value: src,
+              onChange: (event) => {
+                onChange({ src: event.target.value });
+              },
+            }),
+            h(
+              "blockquote",
+              {
+                class: "imgur-embed-pub",
+                "data-id": `a/${src}`,
+              },
+              []
+            ),
+            h(
+              "script",
+              {
+                async: null,
+                src: "//s.imgur.com/min/embed.js",
+                charset: "utf-8",
+              },
+              ""
+            ),
+          ]);
+        },
+      });
+
       CMS.registerShortcode("youtube", {
         label: "YouTube",
         openTag: "[",
