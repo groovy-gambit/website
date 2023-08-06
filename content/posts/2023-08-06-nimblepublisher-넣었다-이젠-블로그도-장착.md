@@ -20,12 +20,4 @@ tags:
 
 근데 한시간 밖에 안걸렸다. ㅎㅎㅎ 참 … 대단하다. 엘릭서란.
 
-
-
-
-
-요렇게: [https://yesalm.fly.dev/posts/test](https://yesalm.fly.dev/posts/test)
-
-
-
-
+요렇게: [https://yesalm.fly.dev/posts](https://yesalm.fly.dev/posts/test)
