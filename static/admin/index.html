@@ -17,9 +17,9 @@
 
       CMS.registerShortcode("imgur", {
         label: "Imgur",
-        openTag: "[",
-        closeTag: "]",
-        separator: "|",
+        openTag: "{{% ",
+        closeTag: " %}}",
+        separator: " ",
         toProps: (args) => {
           if (args.length > 0) {
             return { src: args[0] };
