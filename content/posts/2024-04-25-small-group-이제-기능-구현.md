@@ -10,6 +10,6 @@ tags:
 
 {{% youtube 2ru61aM2yVY %}}
 
-![](https://i.imgur.com/2ru61aM2yVY.jpg)
+![](https://i.imgur.com/8odk2wG.png)
 
 
